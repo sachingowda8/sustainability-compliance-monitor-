@@ -65,6 +65,9 @@ def analyze_compliance():
         
         if not is_valid:
             return jsonify({"error": error_msg}), 400
+            
+        if not clean_query:
+            return jsonify({"error": "Invalid or empty query after sanitization"}), 400
 
         # AI Analysis
         system_prompt = "You are a Sustainability Compliance Expert. Analyze the following query for ESG (Environmental, Social, and Governance) compliance."
