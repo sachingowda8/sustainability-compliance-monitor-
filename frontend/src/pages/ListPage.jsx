@@ -7,7 +7,6 @@ function ListPage() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // FETCH DATA (fixed version)
   useEffect(() => {
     let ignore = false;
 
@@ -42,20 +41,17 @@ function ListPage() {
     };
   }, [status, query]);
 
-  // DELETE
   const handleDelete = (id) => {
     if (!window.confirm("Delete this record?")) return;
 
     API.delete(`/api/${id}`)
       .then(() => {
         alert("Deleted!");
-        // reload data
         setData((prev) => prev.filter((item) => item.id !== id));
       })
       .catch((err) => console.error(err));
   };
 
-  // EDIT
   const handleEdit = (item) => {
     const newName = prompt("Company Name:", item.companyName);
     if (!newName) return;
@@ -76,7 +72,6 @@ function ListPage() {
     API.put(`/api/${item.id}`, payload)
       .then(() => {
         alert("Updated!");
-        // reload data
         setData((prev) =>
           prev.map((it) =>
             it.id === item.id ? { ...it, ...payload } : it
@@ -89,6 +84,14 @@ function ListPage() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Compliance Records</h1>
+
+      {/* ✅ ADD BUTTON (FIXED POSITION) */}
+      <button
+        onClick={() => (window.location.href = "/add")}
+        className="bg-blue-500 text-white px-3 py-2 mb-4"
+      >
+        Add Record
+      </button>
 
       {/* SEARCH */}
       <input
@@ -129,9 +132,7 @@ function ListPage() {
               <tr key={item.id}>
                 <td className="border px-4">{item.id}</td>
                 <td className="border px-4">{item.companyName}</td>
-                <td className="border px-4">
-                  {item.complianceScore}
-                </td>
+                <td className="border px-4">{item.complianceScore}</td>
                 <td className="border px-4">{item.status}</td>
 
                 <td className="border px-4 space-x-2">
