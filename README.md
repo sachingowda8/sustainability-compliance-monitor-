@@ -40,3 +40,10 @@ A tool-based AI solution to monitor and ensure sustainability compliance.
 * Refined the "Sustainability Expert" persona with structured analysis (Pillars, Regulations, Risks).
 * Created `tune_prompts.py` to automate accuracy scoring across 10 real-world inputs.
 * Validated results, achieving high-accuracy structured responses.
+
+### 📅 Day 7
+* Conducted simulated OWASP ZAP security scan.
+* Generated mock `owasp_zap_report.md` with Critical and Medium findings.
+* Fixed Critical finding: Added HTTP Security Headers (`X-Content-Type-Options`, `X-Frame-Options`, `Strict-Transport-Security`, `Content-Security-Policy`).
+* Fixed Critical finding: Disabled hardcoded `debug=True` in production for Flask.
+* Planned Medium fixes (CORS configuration, detailed error hiding, version obfuscation) for upcoming days.
