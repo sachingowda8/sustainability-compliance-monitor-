@@ -47,3 +47,10 @@ A tool-based AI solution to monitor and ensure sustainability compliance.
 * Fixed Critical finding: Added HTTP Security Headers (`X-Content-Type-Options`, `X-Frame-Options`, `Strict-Transport-Security`, `Content-Security-Policy`).
 * Fixed Critical finding: Disabled hardcoded `debug=True` in production for Flask.
 * Planned Medium fixes (CORS configuration, detailed error hiding, version obfuscation) for upcoming days.
+
+### 📅 Day 8
+* Implemented comprehensive test suite with 8 Pytest unit tests.
+* Mocked external Groq API dependencies to isolate testing.
+* Validated endpoint formats (`/health` and `/api/analyze`).
+* Covered robust error handling (missing data, internal errors).
+* Verified prompt injection rejection and HTML sanitization logic.
