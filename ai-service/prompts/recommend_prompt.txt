@@ -1,0 +1,18 @@
+Analyze the sustainability issue:
+
+"{input_text}"
+
+Return exactly 3 recommendations in JSON format:
+
+[
+  {
+    "action_type": "Energy/Waste/Policy",
+    "description": "Detailed recommendation",
+    "priority": "HIGH/MEDIUM/LOW"
+  }
+]
+
+Rules:
+- Return ONLY JSON
+- No explanation
+- No extra text

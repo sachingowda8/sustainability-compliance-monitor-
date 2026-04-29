@@ -1,0 +1,12 @@
+
+Analyze the following sustainability initiative:
+
+{input_text}
+
+Provide response in JSON format with:
+- summary
+- impact_level (Low/Medium/High)
+- category (Environmental/Social/Governance)
+- key_points (list)
+
+Return ONLY valid JSON.
