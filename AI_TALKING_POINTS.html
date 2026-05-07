@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Security Talking Points - Tool-65</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #0ea5e9;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #f43f5e;
+            --green: #10b981;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            width: 800px;
+            padding: 60px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            border-left: 10px solid var(--primary);
+        }
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            font-size: 32px;
+            color: var(--dark);
+        }
+        .subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .point {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #e2e8f0;
+        }
+        .point-title {
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .point-text {
+            color: #475569;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .security .point-title {
+            color: var(--accent);
+        }
+        .security .point {
+            border-left: 4px solid var(--accent);
+        }
+        .ai .point {
+            border-left: 4px solid var(--secondary);
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #94a3b8;
+            text-align: center;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .card { box-shadow: none; width: 100%; border-top: 4px solid var(--primary); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="subtitle">Demo Day Cheat Sheet</div>
+            <h1>AI & Security Talking Points</h1>
+        </div>
+
+        <div class="section ai">
+            <h2>🤖 AI & Prompting (In Plain English)</h2>
+            
+            <div class="point">
+                <span class="point-title">Groq: The "Turbocharger"</span>
+                <p class="point-text">Think of Groq as the ultra-fast engine under the hood. While standard AI can be slow to respond, Groq processes data in milliseconds. For our users, this means compliance checks happen instantly, not in minutes.</p>
+            </div>
+
+            <div class="point">
+                <span class="point-title">Prompts: The "Job Description"</span>
+                <p class="point-text">A prompt isn't just a question; it's a professional job description. We give the AI a 10-page expert manual on sustainability rules. This ensures that every time it looks at a company, it thinks like a senior ESG consultant, not just a chatbot.</p>
+            </div>
+
+            <div class="point">
+                <span class="point-title">LLM Brain (Llama-3.1)</span>
+                <p class="point-text">We use the Llama-3 brain because it’s world-class at logic. It doesn't just "guess" if a company is green—it breaks down the input into structured pillars like Carbon, Waste, and Social Impact to give a grounded score.</p>
+            </div>
+        </div>
+
+        <div class="section security">
+            <h2>🛡️ Security & Privacy (The "Safety First" Approach)</h2>
+
+            <div class="point">
+                <span class="point-title">The "Digital Shield" (Prompt Injection)</span>
+                <p class="point-text">Attackers often try to "trick" AI into giving wrong or dangerous answers. We've implemented a custom digital shield that catches these linguistic tricks before they ever reach the AI, keeping our results reliable and safe.</p>
+            </div>
+
+            <div class="point">
+                <span class="point-title">PII Filter: "Your Secrets are Safe"</span>
+                <p class="point-text">Before any data leaves our system to be analyzed, we scrub it for private information like names or emails. We have a "Zero-Exposure" policy, meaning your sensitive corporate data stays within our secure walls.</p>
+            </div>
+
+            <div class="point">
+                <span class="point-title">The "Clean-In, Clean-Out" Policy</span>
+                <p class="point-text">We sanitize data twice: once when it enters the system (to stop hackers) and once when the AI answers (to ensure the response doesn't contain any hidden malicious code). It's total end-to-end safety.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            Tool-65 · Sustainability Compliance Monitor · Day 16 Milestone
+        </div>
+    </div>
+</body>
+</html>
