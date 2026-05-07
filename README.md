@@ -23,3 +23,14 @@
 * **Service Discovery**: Updated `AiServiceClient.java` and `app.py` to support containerized service communication via environment variables.
 * **E2E Verification**: Verified AI integration within the `ai-service` container environment (using Groq API).
 * **Environment Readiness**: Prepared `.env` templates for secure API key management.
+
+### 📅 Day 17
+* **Fresh Seeded State**: Implemented `seed_data.py` to automatically populate the database with the core demo scenarios.
+* **Environment Reset**: Verified the process for a clean system reset using `docker compose down -v`.
+* **Data Persistence**: Confirmed all records are visible and AI analysis is correctly triggered post-seeding.
+
+#### How to perform a clean reset & seed:
+1. `docker compose down -v`
+2. `docker compose up -d`
+3. Wait for services to be healthy.
+4. Run the seed script: `python seed_data.py`
